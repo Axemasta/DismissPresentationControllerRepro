@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="DismissPresentationControllerRepro.Pages.NormalModalPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Normal Modal">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnClose" Text="Close" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+
+        <Grid>
+            <Label
+                HorizontalOptions="Center"
+                Text="Normal Modal"
+                VerticalOptions="Center" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

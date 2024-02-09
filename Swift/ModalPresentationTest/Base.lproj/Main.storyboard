@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3CE-IV-q8C">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Modal Test-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Modal Test" id="BYZ-38-t0r" customClass="ViewController" customModule="ModalPresentationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eGm-PW-ToJ">
+                                <rect key="frame" x="121.00000000000001" y="381.66666666666669" width="151.33333333333337" height="88.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WO-sg-CYj">
+                                        <rect key="frame" x="0.0" y="0.0" width="151.33333333333334" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Show Modal"/>
+                                        <connections>
+                                            <action selector="ShowModalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p0p-Dn-lVr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWg-gz-eFa">
+                                        <rect key="frame" x="0.0" y="54.333333333333314" width="151.33333333333334" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Show Nav Modal"/>
+                                        <connections>
+                                            <action selector="ShowNavModalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eMs-6H-lYC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eGm-PW-ToJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PQg-GO-i0a"/>
+                            <constraint firstItem="eGm-PW-ToJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h58-sI-Tnp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Modal Test" id="v0c-E7-LIS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959.5419847328244" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vN8-bH-bPq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3CE-IV-q8C" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zbJ-qj-fjQ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fiB-av-6wd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ukf-mW-eiB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.824427480916029" y="-27.464788732394368"/>
+        </scene>
+        <!--Popover Modal-->
+        <scene sceneID="1PW-6A-pY8">
+            <objects>
+                <viewController storyboardIdentifier="modalViewController" title="Popover Modal" modalPresentationStyle="pageSheet" id="dIV-wk-svJ" customClass="ModalViewController" customModule="ModalPresentationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="som-2O-ioE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a modal!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2U-C6-hbv">
+                                <rect key="frame" x="145.66666666666666" y="415.66666666666669" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RMh-fu-VB2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m2U-C6-hbv" firstAttribute="centerX" secondItem="som-2O-ioE" secondAttribute="centerX" id="PGV-fP-5Fv"/>
+                            <constraint firstItem="m2U-C6-hbv" firstAttribute="centerY" secondItem="som-2O-ioE" secondAttribute="centerY" id="csT-3X-aWX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Modal Nav Bar" id="KM1-LE-bYF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3PL-jG-3O2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1789" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

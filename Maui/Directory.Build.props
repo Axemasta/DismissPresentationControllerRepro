@@ -1,0 +1,23 @@
+<Project>
+    <PropertyGroup>
+        <MauiVersion>8.0.6</MauiVersion>
+        <SkipValidateMauiImplicitPackageReferences>true</SkipValidateMauiImplicitPackageReferences>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <NetVersion>net8.0</NetVersion>
+        <IosTargetFramework>$(NetVersion)-ios</IosTargetFramework>
+        <AndroidTargetFramework>$(NetVersion)-android</AndroidTargetFramework>
+        <MacTargetFramework>$(NetVersion)-maccatalyst</MacTargetFramework>
+        <WindowsTargetFramework>$(NetVersion)-windows10.0.19041.0</WindowsTargetFramework>
+
+        <MauiPlatformTargetFrameworks>$(AndroidTargetFramework);$(IosTargetFramework);$(MacTargetFramework)</MauiPlatformTargetFrameworks>
+        <MauiPlatformTargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(AndroidTargetFramework);$(IosTargetFramework);$(MacTargetFramework);$(WindowsTargetFramework)</MauiPlatformTargetFrameworks>
+    </PropertyGroup>
+
+    <ItemGroup Condition=" $(UseMaui) == 'true' ">
+        <PackageVersion Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+        <PackageVersion Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+    </ItemGroup>
+
+</Project>
