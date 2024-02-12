@@ -1,5 +1,7 @@
 # Dismiss Presentation Controller Repro
 
+[![Issue Status](https://img.shields.io/github/issues/detail/state/dotnet/maui/20473)](https://github.com/dotnet/maui/issues/20473)
+
 This repro contains a reproduction of a maui issue where the `UIAdaptivePresentationControllerDelegate` does not work.
 
 When using the `ModalPresentationStyle` in iOS, the page can be swiped closed by the user and there is no XF / Maui callback to handle this event. This issue was [identified and fixed in MVVM Cross](https://github.com/MvvmCross/MvvmCross/issues/3546) (XF) where their viewmodels werent closed, I have experienced the same issue with Prism (how I discovered the issue) and investigated the issue. It turns out Prism is unable to detect closed pages presented in this style and as a result causes issues with which page is active.
