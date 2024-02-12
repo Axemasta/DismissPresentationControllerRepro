@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QXD-h1-oid">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--.NET Modal Test-->
+        <scene sceneID="r6z-cM-7H6">
+            <objects>
+                <viewController storyboardIdentifier="mainViewController" id="rId-uv-8zS" customClass="MainViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Sk-qw-C9I">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Hk9-1s-0vQ">
+                                <rect key="frame" x="121.00000000000001" y="381.66666666666669" width="151.33333333333337" height="88.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTp-ZE-jXv">
+                                        <rect key="frame" x="0.0" y="0.0" width="151.33333333333334" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Show Modal"/>
+                                        <connections>
+                                            <action selector="ShowModal:" destination="rId-uv-8zS" eventType="touchUpInside" id="H7c-5A-Q7a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wu0-WD-UVo">
+                                        <rect key="frame" x="0.0" y="54.333333333333314" width="151.33333333333334" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Show Nav Modal"/>
+                                        <connections>
+                                            <action selector="ShowNavModal:" destination="rId-uv-8zS" eventType="touchUpInside" id="rCl-FN-oMJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="afm-da-88C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hk9-1s-0vQ" firstAttribute="centerX" secondItem="4Sk-qw-C9I" secondAttribute="centerX" id="ETZ-eK-GtS"/>
+                            <constraint firstItem="Hk9-1s-0vQ" firstAttribute="centerY" secondItem="4Sk-qw-C9I" secondAttribute="centerY" id="MRZ-uP-DbH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title=".NET Modal Test" id="ibq-vm-686"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hf6-ad-vxG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156.4885496183206" y="-73.239436619718319"/>
+        </scene>
+        <!--Popover View Controller-->
+        <scene sceneID="1Ve-mk-YKv">
+            <objects>
+                <viewController storyboardIdentifier="popoverViewController" modalPresentationStyle="pageSheet" id="LDs-cR-GJZ" customClass="PopoverViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dqr-85-mHA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a modal!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbC-yb-twc">
+                                <rect key="frame" x="145.66666666666666" y="415.66666666666669" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Afe-bg-uB9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RbC-yb-twc" firstAttribute="centerX" secondItem="dqr-85-mHA" secondAttribute="centerX" id="OYH-gV-3b0"/>
+                            <constraint firstItem="RbC-yb-twc" firstAttribute="centerY" secondItem="dqr-85-mHA" secondAttribute="centerY" id="PeK-a6-4Z0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HHq-PU-aJl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2179" y="-73"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yi6-eO-26b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QXD-h1-oid" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cea-G4-lP4">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rId-uv-8zS" kind="relationship" relationship="rootViewController" id="WMw-7i-oq7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDB-UA-Xh5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229.7709923664122" y="-73.239436619718319"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
