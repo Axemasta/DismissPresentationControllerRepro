@@ -14,7 +14,7 @@ public static class MauiProgram
             .ConfigureMauiHandlers(handlers =>
             {
 #if IOS
-                handlers.AddHandler<NavigationPage, DismissAwareNavigationPageHandler>();
+                // handlers.AddHandler<NavigationPage, DismissAwareNavigationPageHandler>();
                 handlers.AddHandler<PopoverPageBase, DismissAwarePopoverPageHandler>();
 #endif
             })

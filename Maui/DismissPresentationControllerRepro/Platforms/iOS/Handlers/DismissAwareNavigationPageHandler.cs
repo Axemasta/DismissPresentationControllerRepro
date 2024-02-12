@@ -5,6 +5,8 @@ public class DismissAwareNavigationPageHandler : NavigationRenderer
 {
     public override void ViewDidLoad()
     {
+        base.ViewDidLoad();
+        
         Action dismissAction = () =>
         {
             Debug.WriteLine("Presentation controller did dismiss (UINavigationController)");
@@ -15,7 +17,5 @@ public class DismissAwareNavigationPageHandler : NavigationRenderer
             Debug.WriteLine("Adding dismiss aware presentation delegate to navigation page");
             PresentationController.Delegate = new DismissAwareUIPresentationControllerDelegate(dismissAction);
         }
-        
-        base.ViewDidLoad();
     }
 }
